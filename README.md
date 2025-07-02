@@ -1,6 +1,6 @@
 # calculator
 
-A Python-based command-line calculator that supports basic operations, dynamic plugin loading, history tracking with Pandas, environment-based configuration, and professional logging.
+A Python-based command-line calculator that can do basic operations, dynamic plugin loading, history tracking with Pandas, environment-based configuration, and professional logging.
 
 ---
 
@@ -44,7 +44,7 @@ pytest --cov=app
 
 ## Environment Variable Usage
 
-* `HISTORY_FILE` (used in `app/__init__.py` and `calculator_history.py`) sets where your history CSV is stored.
+* `HISTORY_FILE` (used in `app/__init__.py` and `calculator_history.py`) sets where history CSV is stored.
 * `LOG_LEVEL` (used in `calculator_history.py`) dynamically sets the log level (`DEBUG`, `INFO`, `WARNING`, etc.).
 
 ---
@@ -93,7 +93,7 @@ Found in `calculator_history.py`, `app/__init__.py`.
 
 ### Strategy Pattern
 
-* Each command class provides its own `execute` logic following a common interface.
+* Each command class has its own `execute` logic following a common interface.
 
 ---
 
