@@ -1,0 +1,28 @@
+[MASTER]
+init-hook='import sys; sys.path.append(".")'
+extension-pkg-whitelist=
+load-plugins=
+
+[MESSAGES CONTROL]
+disable= unused-argument,
+         line-too-long,
+         redefined-outer-name
+
+[REPORTS]
+output-format=colorized
+reports=yes
+report-full=no
+
+[DESIGN]
+max-parents=15
+max-attributes=10
+min-public-methods=0
+max-public-methods=20
+
+[BASIC]
+variable-rgx=[a-z_][a-z0-9_]{0,30}$
+function-rgx=[a-z_][a-z0-9_]{2,50}$
+argument-rgx=[a-z_][a-z0-9_]{1,30}$
+method-rgx=[a-z_][a-z0-9_]{2,50}$
+module-rgx=[a-z_][a-z0-9_]{1,30}$
+

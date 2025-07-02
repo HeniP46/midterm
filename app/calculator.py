@@ -1,14 +1,12 @@
 from decimal import Decimal
 from typing import Callable
-from calculator.calculations import Calculations
-from calculator.calculation import Calculation
-from calculator.operations import add, subtract, multiply, divide
+from app.calculation import Calculation
+from app.operations import add, subtract, multiply, divide
 
 class Calculator:
     @staticmethod
     def _perform_operation(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
-        calculation = Calculation.create(a, b, operation)
-        Calculations.add_calculation(calculation)
+        calculation = Calculation(a, b, operation)  # pass only 3 params
         return calculation.perform()
 
     @staticmethod
